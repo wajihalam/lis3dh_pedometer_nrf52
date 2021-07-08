@@ -132,10 +132,10 @@ bool lis3dh_register_read(uint8_t register_address, uint8_t * destination, uint8
         return false;
     }
 
-    //set the flag again so that we can read data from the MPU6050's internal register
+    //set the flag again so that we can read data from the LIS3DH's internal register
     m_xfer_done = false;
 	  
-    // Receive the data from the MPU6050
+    // Receive the data from the LIS3DH
     err_code = nrf_drv_twi_rx(&m_twi, LIS3DH_ADDRESS, destination, number_of_bytes);
 		
     //wait until the transmission is completed
